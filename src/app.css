@@ -1,7 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
 	h1 {
@@ -10,4 +9,21 @@
 	h2 {
 		@apply text-2xl font-bold;
 	}
+}
+
+.canvas-container {
+	width: 405px !important;
+	height: 720px !important;
+	position: relative;
+	user-select: none;
+	padding-bottom: initial !important;
+}
+
+.canvas-container > canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
 }
